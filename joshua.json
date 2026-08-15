@@ -1,0 +1,203 @@
+{
+  "schema_version": "1.0",
+  "property": {
+    "id": "offbeat-jt-3721",
+    "name": "3721 Center Ave",
+    "short_name": "Joshua Tree",
+    "brand": "Offbeat Luxury Properties",
+    "location": {
+      "lat": 34.134,
+      "lon": -116.313,
+      "timezone": "America/Los_Angeles"
+    }
+  },
+  "persona": {
+    "name": "Joshua",
+    "greeting": "Welcome. I'm Joshua, the house.",
+    "tone": "warm, dry-witted, desert-calm",
+    "voice": "Default to one sentence; two at most — three only for directions or instructions. Facts first, always concrete: the place, the time, the temperature.\nOne dry remark maximum. A dry remark must carry a concrete fact — a time, a tip, a temperature. Never a vague flourish (\"for a reason\", \"trust me\", \"you'll see\"). If there's nothing concrete to add, the answer is just the answer.\nYou are the house; confident, never salesy, never jokey. No exclamation points. Never say \"as an AI\". One recommendation beats three.\nExample lines:\n- \"The tub's at 99 and climbing. Twenty minutes, maybe less.\"\n- \"La Copine. Go early, order the pancake.\"\n- \"That's a coyote. He's fine. You're fine."
+  },
+  "theme": {
+    "mode": "dark",
+    "accent": "#E8543A",
+    "background": "#0C0A09"
+  },
+  "network": {
+    "ha_url": "wss://homeassistant.local:8123/api/websocket",
+    "wifi_ssid": "DESERTMODEM",
+    "wifi_password": "alpenglow2026"
+  },
+  "features": {
+    "scenes": {
+      "enabled": true,
+      "vibes": [
+        {
+          "label": "Desert Morning",
+          "entity": "scene.desert_morning",
+          "accent": "#EDE4D6",
+          "subtitle": "Cool light · blinds up"
+        },
+        {
+          "label": "Golden Hour",
+          "entity": "scene.golden_hour",
+          "accent": "#FF7452",
+          "subtitle": "Warm dim · deck on"
+        },
+        {
+          "label": "Night Swim",
+          "entity": "scene.night_swim",
+          "accent": "#7E63B8",
+          "subtitle": "Pool glow · low inside"
+        },
+        {
+          "label": "Stargaze",
+          "entity": "scene.stargaze",
+          "accent": "#C43F29",
+          "subtitle": "Everything off"
+        },
+        {
+          "label": "Party",
+          "entity": "scene.party",
+          "accent": "#E85A92",
+          "subtitle": "Synced color + sound"
+        }
+      ]
+    },
+    "climate": {
+      "enabled": true,
+      "entity": "climate.samsung_ducted",
+      "min_f": 65,
+      "max_f": 78
+    },
+    "hot_tub": {
+      "enabled": true,
+      "climate_entity": "climate.hot_tub",
+      "ready_sensor": "sensor.hot_tub_ready_minutes",
+      "min_f": 80,
+      "max_f": 104
+    },
+    "solar": {
+      "enabled": false,
+      "battery_entity": "sensor.anker_battery_soc",
+      "solar_power_entity": "sensor.anker_solar_power",
+      "load_entity": "sensor.anker_load_power"
+    },
+    "stargaze": {
+      "enabled": false,
+      "exterior_light_group": "light.exterior"
+    },
+    "photobooth": {
+      "enabled": false
+    },
+    "extend_stay": {
+      "enabled": false,
+      "availability_sensor": "",
+      "booking_url": ""
+    },
+    "events": {
+      "enabled": false,
+      "feed_url": ""
+    },
+    "dashboard": {
+      "enabled": true,
+      "lights": [
+        "light.living_room",
+        "light.kitchen",
+        "light.bedroom_primary",
+        "light.bedroom_guest",
+        "light.deck",
+        "light.path",
+        "switch.string_lights",
+        "light.outdoor_shower"
+      ],
+      "shades": [
+        "cover.primary_shade",
+        "cover.second_shade"
+      ],
+      "switches": [
+        "switch.fire_pit",
+        "switch.patio_heater"
+      ],
+      "lock": "lock.front_door",
+      "media": "media_player.house"
+    },
+    "ambient_timeout_seconds": 120,
+    "ask": {
+      "enabled": true,
+      "chips": [
+        "Best tacos",
+        "Tonight nearby"
+      ],
+      "notes": "Trash goes in the corral by the gate; pickup Tuesday. Extra propane tank is in the shed. Star parties most Saturdays at the Sky Village swap meet.\n\nLocal guide (host-curated):\nFood: La Copine (Yucca Valley — the brunch, go early), Copper Room (Yucca Valley, the nicer night out), Pappy & Harriet's (Pioneertown — food and live music, check the calendar), Red Dog Saloon (Pioneertown, historic), Tiny Pony Tavern (Yucca Valley, craft cocktails), The Dez (Joshua Tree, casual Southwestern), Joshua Tree Saloon (classic western saloon), Snake Bite (Yucca Valley comfort food), Giant Rock Meeting Room (Yucca Valley — pizza, bar, live music, hole-in-the-wall).\nCoffee & bakery: Joshua Tree Coffee Company (fresh roasted, has WiFi), Luna Bakery (Yucca Valley, sourdough), 29 Loaves (Joshua Tree — freshest bagels in town, they deliver).\nDo: Joshua Tree National Park (west entrance ~20 min — hike, climb, go at golden hour), Keys View (the sunset overlook), Skull Rock, Integratron sound bath (Landers — book ahead), Cascade Trails Mustang Sanctuary (horseback with rescued mustangs), Pioneertown + Pioneertown Preserve (short steep hike, great at sunset), Transmission sculpture (Daniel Popper), Rhythm of Life sculpture hike, off-road/ATV tours.\nStargazing: this is a dark-sky area — fire the Stargaze scene, give your eyes ten minutes."
+    },
+    "sunset_ritual": {
+      "enabled": true,
+      "entity": "scene.golden_hour",
+      "lead_minutes": 120,
+      "prompt": "Golden hour in {minutes} minutes. Want the deck lit and the house warm?"
+    },
+    "music": {
+      "entity": "",
+      "rules": [
+        "Outside speakers step down at 10 PM — county quiet hours, not a suggestion.",
+        "Inside, it's yours all night. The steel doesn't carry sound past the glass."
+      ],
+      "radio_note": "DJ sets commissioned exclusively for this house. Nowhere else plays them."
+    }
+  },
+  "content": {
+    "guidebook": [
+      {
+        "title": "Hot Tub",
+        "body": "Lid folds back toward the fence. Tap Hot Tub on the panel to heat — about 45 minutes from cold. Cover back on when you're done; the desert steals heat at night."
+      },
+      {
+        "title": "The Grill",
+        "body": "Propane, left of the deck stairs. Valve on the tank, then the knobs. If the wind is up, use the windward burners first and keep the lid down."
+      },
+      {
+        "title": "Your Music, House Speakers",
+        "body": "Join the WiFi, open Spotify or AirPlay, pick \"The House.\" Every room follows. Quiet after midnight — the coyotes have seniority."
+      },
+      {
+        "title": "Stargazing",
+        "body": "This is a dark-sky area. Fire the Stargaze vibe and every exterior light drops. Give your eyes ten minutes. The Milky Way does the rest."
+      },
+      {
+        "title": "Checkout",
+        "body": "11 AM. Dishes in the washer, trash in the corral by the gate, keys stay on the hook. The house locks itself."
+      }
+    ],
+    "recommendations": [
+      {
+        "title": "La Copine",
+        "subtitle": "Brunch worth the drive. Go early",
+        "category": "food"
+      },
+      {
+        "title": "Pappy & Harriet's",
+        "subtitle": "Pioneertown. Check the calendar",
+        "category": "music"
+      },
+      {
+        "title": "29 Loaves",
+        "subtitle": "Freshest bagels in town — they deliver",
+        "category": "bagels"
+      },
+      {
+        "title": "Keys View",
+        "subtitle": "The sunset overlook",
+        "category": "outside"
+      }
+    ],
+    "emergency": {
+      "address": "3721 Center Ave, Joshua Tree, CA 92252",
+      "notes": "Emergency 911. Nearest ER: Hi-Desert Medical Center, 24 min. Host: (760) 555-0140."
+    }
+  },
+  "commerce": {
+    "booking_url": "",
+    "tours": [],
+    "advisor_card": null
+  }
+}

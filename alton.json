@@ -1,0 +1,199 @@
+{
+  "schema_version": "1.0",
+  "property": {
+    "id": "alton-seattle",
+    "name": "10539 Alton Ave",
+    "short_name": "Alton",
+    "brand": "Holland House",
+    "location": {
+      "lat": 47.706,
+      "lon": -122.327,
+      "timezone": "America/Los_Angeles"
+    }
+  },
+  "persona": {
+    "name": "Joshua",
+    "greeting": "Welcome home.",
+    "tone": "dry, precise, Pacific Northwest calm",
+    "voice": "Default to one sentence; two at most. Facts first, always concrete.\nOne dry remark maximum. A dry remark must carry a concrete fact — a time, a tip, a temperature. Never a vague flourish (\"for a reason\", \"trust me\", \"you'll see\"). If there's nothing concrete to add, the answer is just the answer.\nThis is Jake's own house in Seattle: no guest formality. Rain is not weather worth mentioning. No exclamation points.\nExample lines:\n- \"77 and sunny. Sunset's 8:23 if you want the roof.\"\n- \"Tub's at 99. Twenty minutes.\"\n- \"Locked."
+  },
+  "theme": {
+    "mode": "dark",
+    "accent": "#E8543A",
+    "background": "#0C0A09"
+  },
+  "network": {
+    "ha_url": "ws://192.168.1.8:8123/api/websocket",
+    "wifi_ssid": "",
+    "wifi_password": ""
+  },
+  "features": {
+    "scenes": {
+      "enabled": true,
+      "vibes": [
+        {
+          "label": "Bright",
+          "entity": "scene.roof_roof_bright",
+          "accent": "#EDE4D6",
+          "subtitle": "Full light"
+        },
+        {
+          "label": "Relax",
+          "entity": "scene.roof_roof_relax",
+          "accent": "#FF7452",
+          "subtitle": "Warm dim"
+        },
+        {
+          "label": "Read",
+          "entity": "scene.roof_roof_read",
+          "accent": "#8A9C7A",
+          "subtitle": "Focused warm"
+        },
+        {
+          "label": "Concentrate",
+          "entity": "scene.roof_roof_concentrate",
+          "accent": "#7E63B8",
+          "subtitle": "Cool + crisp"
+        },
+        {
+          "label": "Nightlight",
+          "entity": "scene.roof_roof_nightlight",
+          "accent": "#C43F29",
+          "subtitle": "Barely there"
+        }
+      ]
+    },
+    "climate": {
+      "enabled": false,
+      "entity": "",
+      "min_f": 62,
+      "max_f": 78
+    },
+    "hot_tub": {
+      "enabled": true,
+      "climate_entity": "climate.hot_tub",
+      "ready_sensor": "",
+      "min_f": 80,
+      "max_f": 104
+    },
+    "solar": {
+      "enabled": false,
+      "battery_entity": "",
+      "solar_power_entity": "",
+      "load_entity": ""
+    },
+    "stargaze": {
+      "enabled": false,
+      "exterior_light_group": ""
+    },
+    "photobooth": {
+      "enabled": false
+    },
+    "extend_stay": {
+      "enabled": false,
+      "availability_sensor": "",
+      "booking_url": ""
+    },
+    "events": {
+      "enabled": false,
+      "feed_url": ""
+    },
+    "dashboard": {
+      "enabled": true,
+      "lights": [
+        "light.living_room_lights",
+        "light.kitchen_lights",
+        "light.dining_room_lights",
+        "light.hallway_lights",
+        "light.master_bedroom_recessed_lights",
+        "light.guest_bedroom",
+        "light.gym_lights",
+        "light.hot_tub_light"
+      ],
+      "shades": [
+        "cover.master_bedroom_shade",
+        "cover.guest_bedroom_shade",
+        "cover.flex_room_shade_1",
+        "cover.flex_room_shade_2",
+        "cover.flex_room_shade_3"
+      ],
+      "switches": [],
+      "lock": "lock.front_door",
+      "media": "media_player.flex_room_sonos_flex_room_sonos"
+    },
+    "ambient_timeout_seconds": 120,
+    "ask": {
+      "enabled": true,
+      "chips": [
+        "Coffee nearby",
+        "House quirks"
+      ],
+      "notes": "It's Jake's own house — answer like the house, keep it dry.\n\nTaylor's Seattle guide (Taylor Holland, Offbeat Luxury Travel — she books tours, wine days, and airport transfers: taylor@offbeatluxurytravel.com):\nBreweries near the house: Project 9, Hellbent, Growler Guys, Magnuson Brewery & Cafe. In Ballard: Urban Family, Obec, Reuben's.\nRestaurants: Yes Siam Thai (Ravenna), Bangrak Market (Belltown), Shiro's (omakase), Pasta Casalinga (Pike Place), La Parisienne (downtown), The George (in the Fairmont — speakeasy inside), Skalka (downtown, Georgian), Ivar's (do the South Lake Union one on the water), Rondo (Capitol Hill, Japanese), Annapurna (Capitol Hill, Nepalese), Butcher's Table (the date-night splurge), Asadero (Ballard, steak tacos), Gas Works Brewing (Lake Union — rent a kayak and dock at the brewery), Bowriders Grill (Lake Union, views), Elysian Fields (game day; best cheese curds in town), Queen Anne Beerhall (sports on), Rough & Tumble (Fremont — women's sports bar).\nSpeakeasies: Needle & Thread, Foreign National, Bathtub Gin, Paper Fan.\nBookstores: Ada's Technical Books (also Taylor's favorite coffee), Charlie's Queer Books, Nook & Cranny, Third Place, Twice Sold Tales, Eagle Harbor (on Bainbridge).\nFun: Can Can Culinary Cabaret (a must — adult-themed, heads up), MoPop, Rage Industry (rage room, close by), Mariners at T-Mobile, Kraken at Climate Pledge.\nWoodinville wine: Darby, Prohibition Cellars, DeLille, Fidelitas, Gard — say Taylor Holland sent you.\nDay trips: Snoqualmie Falls, Rainier, Olympic, St Helens; West Seattle via the water taxi (Alki kayaking, Darby tasting room); San Juan Islands if extending.\nFor guided tours, transfers, or a curated day: offer Taylor — taylor@offbeatluxurytravel.com."
+    },
+    "sunset_ritual": {
+      "enabled": true,
+      "entity": "scene.roof_roof_relax",
+      "lead_minutes": 45,
+      "prompt": "Sunset in {minutes} minutes. Warm the roof for it?"
+    },
+    "music": {
+      "entity": "",
+      "rules": [
+        "Sonos everywhere — the Flex Room leads, the Roam follows."
+      ],
+      "radio_note": ""
+    }
+  },
+  "content": {
+    "guidebook": [
+      {
+        "title": "Hot Tub",
+        "body": "Balboa controller, panel or app. 104 is the max — spa rule. Cover back on when you're out."
+      },
+      {
+        "title": "Music",
+        "body": "Sonos everywhere. AirPlay to Flex Room or Roam, or say the room name in the Sonos app."
+      },
+      {
+        "title": "Shades",
+        "body": "Bedroom and flex room shades are on the panel. They also follow the sun on their own."
+      }
+    ],
+    "recommendations": [
+      {
+        "title": "Cloud City Coffee",
+        "subtitle": "Maple Leaf. The neighborhood one",
+        "category": "coffee"
+      },
+      {
+        "title": "Dick's Drive-In",
+        "subtitle": "Lake City Way. You know why",
+        "category": "food"
+      },
+      {
+        "title": "Green Lake Loop",
+        "subtitle": "2.8 miles. Golden hour is right",
+        "category": "outside"
+      },
+      {
+        "title": "Maharaja Cuisine of India",
+        "subtitle": "Butter chicken, absurdly tender. Get it spicy",
+        "category": "food"
+      },
+      {
+        "title": "Zylberschtein's",
+        "subtitle": "The bagels",
+        "category": "bagels"
+      }
+    ],
+    "emergency": {
+      "address": "10539 Alton Ave NE, Seattle, WA 98125",
+      "notes": "Emergency 911."
+    }
+  },
+  "commerce": {
+    "booking_url": "",
+    "tours": [],
+    "advisor_card": null
+  }
+}
